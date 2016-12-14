@@ -1,0 +1,60 @@
+<script type="text/html" id="youtube">
+
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+      			</button>
+      			<a class="navbar-brand" href="#">HOME</a>
+					
+					<input type="text" id="insertKeyword">
+					<button class="search btn-go-search">검색</button>
+					
+    		</div>
+
+				
+    		<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+        			<li class="btn-go-myVideo">MY UPLOAD VIDEO LIST</li>
+        			<li class="btn-go-chkLike">MY LIKED VIDEO LIST</li>
+					<li class="btn-go-uploadVideo">UPLOAD VIDEO</li>
+      			</ul>
+    		</div>
+  		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<button class="btn-go-uploadVideo">동영상 올리기</button>
+			</div>
+			<div class="col-xs-4">
+				<button class="btn-go-myVideo" title='myVideo'>내 동영상 목록</button>
+			</div>
+			<div class="col-xs-4">
+				<button class="btn-go-chkLike" value="myLiked"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+				좋아요 표시한 동영상
+			</div>
+		</div>
+		<div class="row">
+			<div class="list-group"></div>
+		</div>
+		<div class="row uploadVideo">
+				<div class=col-xs-6><input id='file' type=file></div>
+				<div class=col-xs-6><button id="submit">Upload</button></div>
+				<div class=col-xs-3>title: <input id=title type=text style=width:100% placeholder="title"></div>
+				<div class=col-xs-9>content: <textarea id='description' style=width:100% placeholder="description"></textarea></div>
+		</div>
+		<div class="row uploading">
+		<div class="status"></div>
+		</div>
+		<div class="row pageLoca">
+			<button class=prevBtn>이전목록</button><div id=numberUpDown>1</div><button class=nextBtn>다음목록</button>
+		</div>		
+
+	</div>
+</script>
