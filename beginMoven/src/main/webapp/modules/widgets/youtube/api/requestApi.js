@@ -30,6 +30,7 @@ function(youtubeToken){
 				});
 			},
 			searchList: function(sKeyword, pageToken){
+				yToken.set({maxPage: ''	});
 				$(".list-group").empty();
 				var request = gapi.client.youtube.search.list({
 					q: sKeyword,
@@ -144,10 +145,14 @@ function(youtubeToken){
 				var stat = $('#numberUpDown').text();
 		        var num = parseInt(stat);
 		        num++;
-		        $('#numberUpDown').text(num);
 		        var maxPage = pageToken.maxPage;
-		        if(num > maxPage){
-		        	$('#numberUpDown').text(1);
+		        if(maxPage === ""){
+		        	$('#numberUpDown').text(num);
+		        }else{
+		        	$('#numberUpDown').text(num);
+		        	if(num>maxPage){
+		        		$('#numberUpDown').text(1);
+		        	}
 		        }
 				return nextPage;
 			}

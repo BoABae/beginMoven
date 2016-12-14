@@ -11,14 +11,9 @@ define
   "toiletDetailInfo",
   "BaroAppBase",
   "BaroPanelBase",
-  "BaroProps",
-  "Logger",
-  "osapi",
-  "validator",
-  "encrypt",
 ]
 ,
-function( html, toilet, toiletModel, BaroAppBase, BaroPanelBase, BaroProps, Logger, osapi)
+function( html, toilet, toiletModel, BaroAppBase, BaroPanelBase)
 {
 	var	selectCity = BaroPanelBase.extend(
 	{
@@ -36,6 +31,7 @@ function( html, toilet, toiletModel, BaroAppBase, BaroPanelBase, BaroProps, Logg
 		events: {
 			"click .search": "onSearch",
 			"click .go-main": "onMain",
+			"click .go-btn-toilet": "onSelectCity",
 		}
 		,
 		onShow: function(){
@@ -46,6 +42,14 @@ function( html, toilet, toiletModel, BaroAppBase, BaroPanelBase, BaroProps, Logg
 		onMain: function(){
 			location.href = "#!publicdata";
 		}
+		,
+		onMain: function(){
+			location.href = '#!publicdata';
+		}
+		,
+		onSelectCity: function(){
+			location.href = "#!selectCity";
+		}	
 		,
 		onSearch: function(){
 			$(".list-group").empty();

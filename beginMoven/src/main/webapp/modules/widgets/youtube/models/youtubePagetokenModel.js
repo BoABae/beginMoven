@@ -3,7 +3,7 @@
  * 
  *@author boa 
  */
-define("youtubeToken", function(){
+define(function(){
 		var pageToken = Backbone.Model.extend({
 			defaults:{
 				nextToken: '',

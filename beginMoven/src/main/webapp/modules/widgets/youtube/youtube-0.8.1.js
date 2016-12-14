@@ -11,18 +11,13 @@ define
   "youtubeToken",
   "BaroAppBase",
   "BaroPanelBase",
-  "BaroProps",
-  "Logger",
-  "osapi",
   "requestApi",
   "uploadApi",
-  "validator",
-  "encrypt",
 ]
 ,
-function( html, auth, youtubeModel, BaroAppBase, BaroPanelBase, BaroProps, Logger, osapi, requestApi, uploadApi)
+function( html, auth, youtubeToken, BaroAppBase, BaroPanelBase, requestApi, uploadApi)
 {	
-	var yModel =  new youtubeModel();
+	var yModel =  new youtubeToken();
 	var	youtubeMainPanel = BaroPanelBase.extend(
 	{
 		template: "#youtube",
@@ -134,6 +129,7 @@ function( html, auth, youtubeModel, BaroAppBase, BaroPanelBase, BaroProps, Logge
 			}else if(value === 'onSearch')
 			{
 				requestApi.searchList(sKeyword, pageToken);
+				
 			}
 		}
 		,
